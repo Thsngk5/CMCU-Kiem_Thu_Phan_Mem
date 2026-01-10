@@ -1,4 +1,4 @@
-# Bài 1: Cant't Unsee's Score
+# Bài 1: Can't Unsee's Score
 ![sth](cantunsee.png)
 
 
