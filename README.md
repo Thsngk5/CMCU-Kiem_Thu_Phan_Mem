@@ -261,3 +261,9 @@ Chọn file `login_spec.cy.js` hoặc `cart_spec.cy.js` để chạy test.
 * Thực hiện thành công các kịch bản kiểm thử End-to-End
 * Hiểu rõ luồng kiểm thử UI tự động với Cypress
 * Ghi lại kết quả chạy test (ảnh chụp màn hình / video) để nộp bài
+
+---
+
+### 9. Video chạy kiểm thử
+
+[Xem video chạy kiểm thử End-to-End với Cypress](Bai3/test_bai_3.mp4)
