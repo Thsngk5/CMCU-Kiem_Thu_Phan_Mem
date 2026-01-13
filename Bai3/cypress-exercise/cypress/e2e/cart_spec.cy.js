@@ -16,4 +16,14 @@ describe('Cart Test', () => {
     cy.get('.product_sort_container').select('lohi');
     cy.get('.inventory_item_price').first().should('have.text', '$7.99');
   });
+
+  it('Should remove product from the cart', () => {
+    cy.get('.inventory_item').first().find('.btn_inventory').click();
+    cy.get('.shopping_cart_badge').should('have.text', '1');
+
+    cy.get('.inventory_item').first().find('.btn_inventory').click();
+
+    cy.get('.shopping_cart_badge').should('not.exist');
+  });
+
 });
