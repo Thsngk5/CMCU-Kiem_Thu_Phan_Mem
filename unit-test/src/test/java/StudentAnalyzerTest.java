@@ -146,5 +146,61 @@ public class StudentAnalyzerTest {
         );
     }
 
+    @Test
+    public void testCalculateValidAverage_OneValidManyInvalid() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        assertEquals(
+            6.0,
+            analyzer.calculateValidAverage(Arrays.asList(6.0, -1.0, 12.0)),
+            0.01
+        );
+    }
+
+    @Test
+    public void testCountExcellentStudents_ValidButNotExcellent_WithInvalid() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        assertEquals(
+            0,
+            analyzer.countExcellentStudents(Arrays.asList(7.0, -1.0, 12.0))
+        );
+    }
+
+    @Test
+    public void testCountExcellentStudents_SingleExcellent_WithInvalid() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        assertEquals(
+            1,
+            analyzer.countExcellentStudents(Arrays.asList(9.0, -1.0, 11.0))
+        );
+    }
+
+    @Test
+    public void testCalculateValidAverage_SingleValid_WithInvalid() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        assertEquals(
+            7.0,
+            analyzer.calculateValidAverage(Arrays.asList(7.0, -3.0, 15.0)),
+            0.01
+        );
+    }
+
+    @Test
+    public void testCalculateValidAverage_NoValidButNotEmpty() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        assertEquals(
+            0,
+            analyzer.calculateValidAverage(Arrays.asList(-1.0, 11.0))
+        );
+    }
+
+    @Test
+    public void testCountExcellentStudents_ValidButNoExcellent() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        assertEquals(
+            0,
+            analyzer.countExcellentStudents(Arrays.asList(5.0, 6.5, 7.9))
+        );
+    }
+
 }
 
